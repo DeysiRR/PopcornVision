@@ -1,0 +1,13 @@
+/* Estilos para la ventana de inicio */
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff; /* Fondo blanco o el color que desees */
+}
+
+/* Ocultar el contenido principal inicialmente */
+.hidden {
+    display: none;
+}
