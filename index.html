@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script> 
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
     <div class="splash-screen">
@@ -10,8 +12,12 @@
     </div>
 
     <main class="hidden">
-        <!-- Contenido principal (como la pantalla de acceso a la cámara) -->
-        <!-- ... -->
+        <a-scene embedded arjs>
+            <a-entity scale=".2 .2 .2"> 
+              <a-entity gltf-model="fox.glb" scale="3 3 3" crossOrigin="anonymous">
+              </a-entity>
+              <a-marker-camera preset='hiro'></a-marker-camera>
+              </a-scene>
     </main>
 
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
