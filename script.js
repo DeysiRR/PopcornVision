@@ -3,3 +3,4 @@ setTimeout(function () {
     document.querySelector('.splash-screen').style.display = 'none';
     document.querySelector('main').classList.remove('hidden');
 }, 2000); // 2000 milisegundos = 2 segundos
+
