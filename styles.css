@@ -19,14 +19,14 @@
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
-    width: 50%; 
+    width: 50%; /* Ajusta el ancho según sea necesario */
 }
 
 .round-button {
     border-radius: 50%;
-    width: 50px; 
-    height: 50px; 
-    background-color: #ccc;
+    width: 50px; /* Ajusta el tamaño del botón */
+    height: 50px; /* Ajusta el tamaño del botón */
+    background-color: #ccc; /* Color de fondo de los botones */
     border: none;
     display: flex;
     align-items: center;
@@ -34,6 +34,6 @@
 }
 
 .round-button img {
-    width: auto;
+    width: auto; /* Ajusta el tamaño del icono dentro del botón */
     height: 70%;
 }
