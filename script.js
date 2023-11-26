@@ -1,8 +1,14 @@
-// Esperar 2 segundos y luego mostrar el contenido principal
+// Esperar 2 segundos y luego mostrar el contenido principal y los botones
 setTimeout(function () {
     document.querySelector('.splash-screen').style.display = 'none';
     document.querySelector('main').classList.remove('hidden');
+    
+    // Mostrar los botones después de ocultar la pantalla de inicio
+    document.querySelector('.buttons-container').style.visibility = 'visible';
 }, 2000); // 2000 milisegundos = 2 segundos
+
+
+
 
 AFRAME.registerComponent('rotation-reader', {
     /**
