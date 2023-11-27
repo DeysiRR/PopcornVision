@@ -27,6 +27,91 @@ AFRAME.registerComponent('rotation-reader', {
     })()
 });
 
+
+var showingNacho = 1;
+const nachos = [];
+nachos.push(document.getElementById('enachoIndividual'));
+nachos.push(document.getElementById('enachoGrande'));
+
+
+var showingSoda = 1;
+const sodas = [];
+sodas.push(document.getElementById('esodaChica'));
+sodas.push(document.getElementById('esodaMediana'));
+sodas.push(document.getElementById('esodaGrande'));
+sodas.push(document.getElementById('esodaJumbo'));
+
+
+var showingHD = 1;
+const hotdogs = [];
+hotdogs.push(document.getElementById('ehdIndividual'));
+hotdogs.push(document.getElementById('ehdJumbo'));
+
+
+var showingPopcorn = 1;
+const palomitas = [];
+palomitas.push(document.getElementById('epalomitaChica'));
+palomitas.push(document.getElementById('epalomitaMediana'));
+palomitas.push(document.getElementById('epalomitaGrande'));
+palomitas.push(document.getElementById('epalomitaJumbo'));
+palomitas.push(document.getElementById('epalomitaLlevar'));
+
+function showHotdogs(){
+    hideAllModels();
+    /*for(var i = 0; i < hotdogs.length; i++){
+        hotdogs[i].setAttribute('visible', false);
+    }*/
+    hotdogs[showingHD%hotdogs.length].setAttribute('visible', true);
+    showingHD++;
+};
+
+function showNachos(){
+    hideAllModels();
+    /*for(var i = 0; i < nachos.length; i++){
+        nachos[i].setAttribute('visible', false);
+    }*/
+    nachos[showingNacho%nachos.length].setAttribute('visible', true);
+    showingNacho++;
+};
+
+function showSodas(){
+    hideAllModels();
+    /*for(var i = 0; i < sodas.length; i++){
+        sodas[i].setAttribute('visible', false);
+    }*/
+    sodas[showingSoda%sodas.length].setAttribute('visible', true);
+    showingSoda++;
+};
+
+function showPalomitas(){
+    hideAllModels();
+    /*for(var i = 0; i < popcorns.length; i++){
+        popcorns[i].setAttribute('visible', false);
+    }*/
+    palomitas[showingPopcorn%palomitas.length].setAttribute('visible', true);
+    showingPopcorn++;
+};
+
+function hideAllModels() {
+    for(var i = 0; i < nachos.length; i++){
+        nachos[i].setAttribute('visible', false);
+    }
+    for(var i = 0; i < sodas.length; i++){
+        sodas[i].setAttribute('visible', false);
+    }
+    for(var i = 0; i < hotdogs.length; i++){
+        hotdogs[i].setAttribute('visible', false);
+    }
+    for(var i = 0; i < palomitas.length; i++){
+        palomitas[i].setAttribute('visible', false);
+    }
+};
+
+
+
+
+
+/*
 document.addEventListener('DOMContentLoaded', function () {
     // Obtener referencias a los botones y modelos
     const nachosButton = document.getElementById('nachosButton');
@@ -34,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sodaButton = document.getElementById('sodaButton');
     const popcornButton = document.getElementById('popcornButton');
 
-    const nachoModel = document.getElementById('nachoIndividual');
+    var nachoModel = document.getElementById('nachoIndividual');
     const hotdogModel = document.getElementById('hdIndividual');
     const sodaModel = document.getElementById('sodaMediana');
     const popcornModel = document.getElementById('sodaGrande'); // Cambiar al modelo de palomitas si lo tienes
@@ -75,4 +160,4 @@ document.addEventListener('DOMContentLoaded', function () {
         sodaModel.setAttribute('visible', false);
         popcornModel.setAttribute('visible', false);
     }
-});
+});*/
