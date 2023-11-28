@@ -1,4 +1,4 @@
- <!--Palomitas Chicas-->
+<!--Palomitas Chicas-->
                 <a-asset-item
                   id="palomitaChica"
                   src="https://cdn.glitch.global/108634cd-3373-4ef2-8a8d-4030675a6982/PalomitaChica.glb?v=1700842572758"
@@ -24,9 +24,8 @@
                   src="https://cdn.glitch.me/108634cd-3373-4ef2-8a8d-4030675a6982/PalomitaLlevar.glb?v=1700842682444"
                 ></a-asset-item>
 
-
-<a-entity id="palomitaChica" gltf-model="#palomitaChica" scale="0.08 0.08 0.08" position="1.6 0 -0.5"></a-entity>
-                <a-entity id="palomitaMediana" gltf-model="#palomitaMediana" scale="0.08 0.08 0.08" position="1.8 0 -0.5"></a-entity>
-                <a-entity id="palomitaGrande" gltf-model="#palomitaGrande" scale="0.08 0.08 0.08" position="2 0 -0.5"></a-entity>
-                <a-entity id="palomitaJumbo" gltf-model="#palomitaJumbo" scale="0.08 0.08 0.08" position="2.2 0 -0.5"></a-entity>
-                <a-entity id="palomitaLlevar" gltf-model="#palomitaLlevar" scale="0.08 0.08 0.08" position="2.4 0 -0.5"></a-entity>
+                <a-entity look-at="#camera" id="epalomitaChica" gltf-model="#palomitaChica" scale="0.08 0.08 0.08" position="0 -0.5 -1" visible="false"></a-entity>
+                <a-entity look-at="#camera" id="epalomitaMediana" gltf-model="#palomitaMediana" scale="0.08 0.08 0.08" position="0 -0.5 -1" visible="false"></a-entity>
+                <a-entity look-at="#camera" id="epalomitaGrande" gltf-model="#palomitaGrande" scale="0.08 0.08 0.08" position="0 -0.5 -1" visible="false"></a-entity>
+                <a-entity look-at="#camera" id="epalomitaJumbo" gltf-model="#palomitaJumbo" scale="0.08 0.08 0.08" position="0 -0.5 -1" visible="false"></a-entity>
+                <a-entity look-at="#camera" id="epalomitaLlevar" gltf-model="#palomitaLlevar" scale="0.08 0.08 0.08" position="0 -0.5 -1" visible="false"></a-entity>

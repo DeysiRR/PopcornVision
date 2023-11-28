@@ -27,6 +27,16 @@ AFRAME.registerComponent('rotation-reader', {
     })()
 });
 
+AFRAME.registerComponent('look-at', {
+    schema: { type: 'selector' },
+    
+    init: function () {},
+  
+    tick: function () {
+      this.el.object3D.lookAt(this.data.object3D.position)
+    }
+  })
+
 
 var showingNacho = 1;
 const nachos = [];
@@ -58,36 +68,24 @@ palomitas.push(document.getElementById('epalomitaLlevar'));
 
 function showHotdogs(){
     hideAllModels();
-    /*for(var i = 0; i < hotdogs.length; i++){
-        hotdogs[i].setAttribute('visible', false);
-    }*/
     hotdogs[showingHD%hotdogs.length].setAttribute('visible', true);
     showingHD++;
 };
 
 function showNachos(){
     hideAllModels();
-    /*for(var i = 0; i < nachos.length; i++){
-        nachos[i].setAttribute('visible', false);
-    }*/
     nachos[showingNacho%nachos.length].setAttribute('visible', true);
     showingNacho++;
 };
 
 function showSodas(){
     hideAllModels();
-    /*for(var i = 0; i < sodas.length; i++){
-        sodas[i].setAttribute('visible', false);
-    }*/
     sodas[showingSoda%sodas.length].setAttribute('visible', true);
     showingSoda++;
 };
 
 function showPalomitas(){
     hideAllModels();
-    /*for(var i = 0; i < popcorns.length; i++){
-        popcorns[i].setAttribute('visible', false);
-    }*/
     palomitas[showingPopcorn%palomitas.length].setAttribute('visible', true);
     showingPopcorn++;
 };
@@ -106,58 +104,3 @@ function hideAllModels() {
         palomitas[i].setAttribute('visible', false);
     }
 };
-
-
-
-
-
-/*
-document.addEventListener('DOMContentLoaded', function () {
-    // Obtener referencias a los botones y modelos
-    const nachosButton = document.getElementById('nachosButton');
-    const hotdogButton = document.getElementById('hotdogButton');
-    const sodaButton = document.getElementById('sodaButton');
-    const popcornButton = document.getElementById('popcornButton');
-
-    var nachoModel = document.getElementById('nachoIndividual');
-    const hotdogModel = document.getElementById('hdIndividual');
-    const sodaModel = document.getElementById('sodaMediana');
-    const popcornModel = document.getElementById('sodaGrande'); // Cambiar al modelo de palomitas si lo tienes
-
-    // Asignar funciones a los eventos de clic en los botones
-    nachosButton.addEventListener('click', () => {
-        // Ocultar todos los modelos
-        hideAllModels();
-        // Mostrar el modelo de nachos
-        nachoModel.setAttribute('visible', true);
-    });
-
-    hotdogButton.addEventListener('click', () => {
-        // Ocultar todos los modelos
-        hideAllModels();
-        // Mostrar el modelo de hot dog
-        hotdogModel.setAttribute('visible', true);
-    });
-
-    sodaButton.addEventListener('click', () => {
-        // Ocultar todos los modelos
-        hideAllModels();
-        // Mostrar el modelo de soda
-        sodaModel.setAttribute('visible', true);
-    });
-
-    popcornButton.addEventListener('click', () => {
-        // Ocultar todos los modelos
-        hideAllModels();
-        // Mostrar el modelo de palomitas (cambia al modelo que tengas)
-        popcornModel.setAttribute('visible', true);
-    });
-
-    // Función para ocultar todos los modelos
-    function hideAllModels() {
-        nachoModel.setAttribute('visible', false);
-        hotdogModel.setAttribute('visible', false);
-        sodaModel.setAttribute('visible', false);
-        popcornModel.setAttribute('visible', false);
-    }
-});*/
